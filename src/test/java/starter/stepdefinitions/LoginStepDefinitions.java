@@ -6,10 +6,13 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import starter.dashboard.CreditAvailable;
+import starter.dashboard.OverViewFactory;
 import starter.login.DoLogin;
 import starter.navigation.NavigateTo;
 
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
+import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class LoginStepDefinitions {
     String actor;
@@ -36,7 +39,9 @@ public class LoginStepDefinitions {
     @Then("He should have access to manage his account")
     public void he_should_have_access_to_manage_his_account() {
         // Write code here that turns the phrase above into concrete actions
-        System.out.println("Usuario Logueado");
+        System.out.println("1er metodo opcion 1 - credito:"+ CreditAvailable.value().answeredBy(theActorInTheSpotlight()));
+        System.out.println("1er metodo opcion 2 - credito:"+ new CreditAvailable().answeredBy(theActorInTheSpotlight()));
+        System.out.println("2do metodo - credito:"+ OverViewFactory.creditAvailable().answeredBy(theActorInTheSpotlight()));
     }
 
 }
