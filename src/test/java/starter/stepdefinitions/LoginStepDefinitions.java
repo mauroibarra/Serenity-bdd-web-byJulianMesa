@@ -11,8 +11,10 @@ import starter.dashboard.OverViewFactory;
 import starter.login.DoLogin;
 import starter.navigation.NavigateTo;
 
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
+import static org.hamcrest.core.IsEqual.equalTo;
 
 public class LoginStepDefinitions {
     String actor;
@@ -42,6 +44,12 @@ public class LoginStepDefinitions {
         System.out.println("1er metodo opcion 1 - credito:"+ CreditAvailable.value().answeredBy(theActorInTheSpotlight()));
         System.out.println("1er metodo opcion 2 - credito:"+ new CreditAvailable().answeredBy(theActorInTheSpotlight()));
         System.out.println("2do metodo - credito:"+ OverViewFactory.creditAvailable().answeredBy(theActorInTheSpotlight()));
+
+        theActorInTheSpotlight().should(
+                seeThat("the displayed credit available", OverViewFactory.creditAvailable(),equalTo("$17,600"))
+                ,seeThat("the displayed total balance", OverViewFactory.totalBalance(),equalTo("$400"))
+                ,seeThat("the displayed credit available", OverViewFactory.creditAvailable(),equalTo("$17,800"))
+        );
     }
 
 }
