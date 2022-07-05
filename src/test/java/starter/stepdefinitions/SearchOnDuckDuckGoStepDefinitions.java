@@ -6,15 +6,11 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import net.serenitybdd.screenplay.ensure.Ensure;
 import starter.navigation.NavigateTo;
-import starter.search.SearchFor;
-import starter.search.SearchResult;
+import starter.ui.search.SearchFor;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
-import static org.hamcrest.core.Every.everyItem;
-import static starter.matchers.StringContainsIgnoringCase.containsIgnoringCase;
 
 public class SearchOnDuckDuckGoStepDefinitions {
     @Before

@@ -1,5 +1,6 @@
 Feature: Search by keyword
 
+  @testSearch
   Scenario: Searching for a term
     Given Sergey is on the DuckDuckGo home page
     When he searches for "cucumber"

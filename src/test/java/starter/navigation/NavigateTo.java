@@ -11,7 +11,7 @@ public class NavigateTo {
     }
     public static Performable theDemoAppliTools() {
         return Task.where("{0} opens the Application Tools",
-                //Open.browserOn().the(AppliTools.class));
-                Open.url("https://demo.applitools.com"));
+                Open.browserOn().the(AppliTools.class));
+//                Open.url("https://demo.applitools.com"));
     }
 }

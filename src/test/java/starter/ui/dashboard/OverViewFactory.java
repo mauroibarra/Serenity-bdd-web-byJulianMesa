@@ -1,4 +1,4 @@
-package starter.dashboard;
+package starter.ui.dashboard;
 //2do metodo para hacer questions por factory
 
 import net.serenitybdd.screenplay.Question;

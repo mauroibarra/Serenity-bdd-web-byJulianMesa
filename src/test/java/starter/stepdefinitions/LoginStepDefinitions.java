@@ -6,9 +6,9 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import starter.dashboard.CreditAvailable;
-import starter.dashboard.OverViewFactory;
-import starter.login.DoLogin;
+import starter.ui.dashboard.CreditAvailable;
+import starter.ui.dashboard.OverViewFactory;
+import starter.ui.login.DoLogin;
 import starter.navigation.NavigateTo;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
