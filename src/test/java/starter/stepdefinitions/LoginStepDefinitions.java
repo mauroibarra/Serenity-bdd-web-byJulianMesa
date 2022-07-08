@@ -6,6 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import starter.builders.Login;
 import starter.ui.dashboard.CreditAvailable;
 import starter.ui.dashboard.OverViewFactory;
 import starter.ui.login.DoLogin;
@@ -33,7 +34,14 @@ public class LoginStepDefinitions {
         // Write code here that turns the phrase above into concrete actions
         theActorCalled(actor).attemptsTo(
                 NavigateTo.theDemoAppliTools(),
-                DoLogin.withCredentials("mauro","algo")
+//                //con metodo básico
+//                DoLogin.withCredentials("mauro","algo")
+                //utilazando el pattern de Builders
+                Login
+                        .with()
+                        .username("mauro")
+                        .andPassword("12225")
+                        .rememberMe(true)
         );
 
     }
