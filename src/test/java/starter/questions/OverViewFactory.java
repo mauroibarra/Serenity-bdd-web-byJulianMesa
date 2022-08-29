@@ -1,9 +1,11 @@
-package starter.ui.dashboard;
-//2do metodo para hacer questions por factory
+package starter.questions;
+
 
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.TextContent;
+import starter.ui.dashboard.FinancialOverView;
 
+//2do metodo para hacer questions por factory
 public class OverViewFactory {
 
     public static Question<String> creditAvailable(){

@@ -8,8 +8,8 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import starter.builders.Login;
 import starter.ui.dashboard.CreditAvailable;
-import starter.ui.dashboard.OverViewFactory;
-import starter.ui.login.DoLogin;
+import starter.questions.OverViewFactory;
+
 import starter.navigation.NavigateTo;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
